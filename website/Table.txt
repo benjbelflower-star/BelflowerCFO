@@ -1,0 +1,144 @@
+/* === Comparison Tables (Belflower Finance) === */
+#compare { scroll-margin-top: 96px; }
+
+.compare-block{
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+  border: 1px solid var(--bf-border);
+  border-radius: calc(var(--bf-radius) + 2px);
+  box-shadow: var(--bf-shadow);
+  padding: 18px;
+  margin-top: 18px;
+}
+
+.compare-block-title{
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--bf-ink);
+  margin: 4px 0 14px;
+  font-size: 1.05rem;
+}
+
+.compare-table-wrap{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--bf-radius);
+  border: 1px solid var(--bf-border);
+  background: #fff;
+}
+
+.compare-table{
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 820px;
+}
+
+.compare-table thead th{
+  text-align: left;
+  font-size: .85rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--bf-muted);
+  background: linear-gradient(180deg, rgba(37,99,235,.06), rgba(14,165,164,.04));
+  border-bottom: 1px solid var(--bf-border);
+  padding: 12px 12px;
+  white-space: nowrap;
+}
+
+.compare-table tbody td{
+  padding: 12px 12px;
+  border-bottom: 1px solid var(--bf-border);
+  color: var(--bf-slate);
+  vertical-align: top;
+  font-size: .97rem;
+  line-height: 1.55;
+}
+
+.compare-table tbody tr:hover td{
+  background: rgba(37,99,235,.04);
+}
+
+.compare-table tbody tr:last-child td{
+  border-bottom: none;
+}
+
+.pkg-name{
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--bf-ink);
+}
+
+.pkg-note{
+  margin-top: 2px;
+  font-size: .88rem;
+  color: var(--bf-muted);
+}
+
+.pill{
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(37,99,235,.08);
+  border: 1px solid rgba(37,99,235,.18);
+  color: var(--bf-accent);
+  font-weight: 800;
+  font-size: .85rem;
+  white-space: nowrap;
+}
+
+.pill--strong{
+  background: rgba(14,165,164,.10);
+  border-color: rgba(14,165,164,.22);
+  color: var(--bf-accent-2);
+}
+
+/* Matrix table alignment */
+.compare-table--matrix thead th:not(:first-child),
+.compare-table--matrix tbody td:not(:first-child){
+  text-align: center;
+  white-space: nowrap;
+}
+
+.compare-legend{
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  color: var(--bf-muted);
+  font-size: .92rem;
+}
+
+/* CTA card under tables */
+.compare-cta{
+  margin-top: 18px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, rgba(37,99,235,.06), rgba(14,165,164,.06)), var(--bf-card);
+  border: 1px solid var(--bf-border);
+  border-radius: calc(var(--bf-radius) + 2px);
+  padding: 18px;
+  box-shadow: var(--bf-shadow);
+}
+
+.compare-cta-title{
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--bf-ink);
+  margin-bottom: 2px;
+}
+
+.compare-cta-sub{
+  color: var(--bf-slate);
+  max-width: 760px;
+}
+
+.compare-cta-actions{ display:flex; gap:12px; }
+
+/* Mobile tweaks */
+@media (max-width: 768px){
+  .compare-block{ padding: 14px; }
+  .compare-cta{ padding: 14px; }
+  .compare-table{ min-width: 720px; }
+}
