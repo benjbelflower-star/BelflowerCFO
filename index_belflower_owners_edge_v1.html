@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belflower Finance | Fractional CFO for Multi-Site & Seasonal Operators</title>
+    <meta name="description" content="Fractional CFO for multi-site and seasonal businesses. Cash clarity, forecasting, dashboards, and decision support without a full-time CFO.">
+    <style>
+
+/* Belflower Finance – Light, modern, professional skin
+   Drop-in replacement for the existing <style> block.
+*/
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root{
+  --bf-ink:#0B1220;
+  --bf-slate:#334155;
+  --bf-muted:#64748B;
+  --bf-bg:#F8FAFC;
+  --bf-card:#FFFFFF;
+  --bf-border:#E2E8F0;
+
+  --bf-accent:#2563EB;
+  --bf-accent-2:#0EA5A4;
+  --bf-accent-soft:#E0E7FF;
+
+  --bf-radius:12px;
+  --bf-shadow:0 10px 30px rgba(2,6,23,.08);
+
+  --bf-max:1120px;
+}
+
+body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height:1.6;
+  color:var(--bf-ink);
+  background:var(--bf-bg);
+  overflow-x:hidden;
+}
+
+/* Kill the animated neon background */
+.bg-gradient{ display:none !important; }
+
+/* Navigation */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(248,250,252,.9);
+  backdrop-filter: blur(12px);
+  border-bottom:1px solid var(--bf-border);
+  z-index:1000;
+  padding:.9rem 0;
+}
+
+.nav-container{
+  max-width:var(--bf-max);
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:1.05rem;
+  font-weight:750;
+  letter-spacing:-0.02em;
+  color:var(--bf-ink);
+  background:none !important;
+  -webkit-background-clip:initial !important;
+  background-clip:initial !important;
+}
+
+.nav-links{
+  display:flex;
+  gap:2rem;
+  list-style:none;
+}
+.nav-links a{
+  color:var(--bf-slate);
+  text-decoration:none;
+  font-size:.95rem;
+  font-weight:600;
+  transition:color .2s ease;
+  position:relative;
+}
+.nav-links a:hover{ color:var(--bf-accent); }
+.nav-links a::after{
+  content:'';
+  position:absolute;
+  bottom:-6px;
+  left:0;
+  width:0;
+  height:2px;
+  background:var(--bf-accent);
+  transition:width .2s ease;
+}
+.nav-links a:hover::after{ width:100%; }
+
+/* Base section sizing */
+section{
+  padding:5.5rem 24px;
+  max-width:var(--bf-max);
+  margin:0 auto;
+}
+
+/* Hero */
+.hero{
+  margin-top:78px;
+  padding:5.25rem 24px 3.5rem;
+  max-width:var(--bf-max);
+  margin-left:auto;
+  margin-right:auto;
+  position:relative;
+}
+.hero-content{ max-width:860px; }
+
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  background:var(--bf-accent-soft);
+  border:1px solid rgba(37,99,235,.25);
+  padding:.45rem 1rem;
+  border-radius:999px;
+  font-size:.80rem;
+  font-weight:700;
+  color:var(--bf-accent);
+  margin-bottom:1.25rem;
+  letter-spacing:.06em;
+}
+.hero h1{
+  font-size:3.1rem;
+  font-weight:800;
+  line-height:1.12;
+  margin-bottom:1rem;
+  letter-spacing:-0.035em;
+  color:var(--bf-ink);
+  background:none !important;
+  -webkit-background-clip:initial !important;
+  background-clip:initial !important;
+}
+.hero .highlight{
+  color:var(--bf-accent);
+  background:none !important;
+  -webkit-background-clip:initial !important;
+  background-clip:initial !important;
+}
+.hero p{
+  font-size:1.12rem;
+  color:var(--bf-slate);
+  margin-bottom:1.75rem;
+  line-height:1.8;
+  max-width:720px;
+}
+
+/* Buttons */
+.cta-group{ display:flex; gap:12px; flex-wrap:wrap; }
+
+.cta-primary, .cta-secondary{
+  display:inline-flex;
+  align-items:center;
+  gap:.6rem;
+  padding:12px 18px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:.98rem;
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease, color .15s ease;
+  cursor:pointer;
+}
+.cta-primary{
+  background:var(--bf-accent);
+  color:#fff;
+  border:1px solid rgba(37,99,235,.2);
+  box-shadow: 0 10px 18px rgba(37,99,235,.18);
+}
+.cta-primary:hover{ transform:translateY(-1px); box-shadow:0 14px 24px rgba(37,99,235,.22); }
+
+.cta-secondary{
+  background:transparent;
+  color:var(--bf-ink);
+  border:1px solid var(--bf-border);
+}
+.cta-secondary:hover{
+  border-color:rgba(37,99,235,.35);
+  background:rgba(37,99,235,.06);
+}
+
+/* Video hero: calm band */
+.video-hero{
+  position:relative;
+  height:360px;
+  margin:2.5rem auto 0;
+  border-radius:var(--bf-radius);
+  overflow:hidden;
+  border:1px solid var(--bf-border);
+  max-width:var(--bf-max);
+  background:linear-gradient(135deg, rgba(37,99,235,.06) 0%, rgba(14,165,164,.06) 100%);
+}
+.video-bg{ opacity:0.10; }
+.video-overlay{
+  background:transparent;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:24px;
+}
+.video-content h2{
+  font-size:2rem;
+  font-weight:800;
+  margin-bottom:.5rem;
+  letter-spacing:-0.02em;
+  color:var(--bf-ink);
+}
+.video-content p{
+  font-size:1.05rem;
+  color:var(--bf-slate);
+}
+
+/* Section headers */
+.section-header{ text-align:center; margin-bottom:2.75rem; }
+.section-badge{
+  display:inline-block;
+  background:rgba(37,99,235,.08);
+  border:1px solid rgba(37,99,235,.18);
+  padding:.45rem 1rem;
+  border-radius:999px;
+  font-size:.78rem;
+  font-weight:800;
+  color:var(--bf-accent);
+  margin-bottom:1rem;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.section-title{
+  font-size:2.2rem;
+  font-weight:850;
+  margin-bottom:.85rem;
+  letter-spacing:-0.02em;
+  line-height:1.2;
+  color:var(--bf-ink);
+}
+.section-subtitle{
+  font-size:1.05rem;
+  color:var(--bf-slate);
+  max-width:820px;
+  margin:0 auto;
+  line-height:1.75;
+}
+
+/* Stats */
+.stats{ padding:3.5rem 24px; max-width:var(--bf-max); margin:0 auto; }
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:16px;
+}
+.stat-card{
+  background:var(--bf-card);
+  border:1px solid var(--bf-border);
+  border-radius:var(--bf-radius);
+  padding:22px;
+  text-align:center;
+  transition:border-color .15s ease, transform .15s ease;
+}
+.stat-card:hover{
+  border-color:rgba(37,99,235,.35);
+  transform:translateY(-1px);
+}
+.stat-card::before{ display:none !important; }
+.stat-number{
+  font-size:2.2rem;
+  font-weight:850;
+  color:var(--bf-ink);
+  background:none !important;
+  -webkit-background-clip:initial !important;
+  background-clip:initial !important;
+  line-height:1.1;
+  margin-bottom:.25rem;
+}
+.stat-label{ font-size:.95rem; color:var(--bf-muted); font-weight:650; }
+
+/* Grids */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+  gap:16px;
+}
+
+.service-card{
+  background:var(--bf-card);
+  border:1px solid var(--bf-border);
+  border-radius:var(--bf-radius);
+  padding:22px;
+  transition:border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+  position:relative;
+  overflow:hidden;
+}
+.service-card::before{ display:none !important; }
+.service-card:hover{
+  border-color:rgba(37,99,235,.35);
+  transform:translateY(-1px);
+  box-shadow: var(--bf-shadow);
+}
+.service-icon{ font-size:1.6rem; margin-bottom:10px; }
+.service-card h3{
+  font-size:1.15rem;
+  font-weight:800;
+  margin-bottom:.5rem;
+  color:var(--bf-ink);
+}
+.service-card p{
+  color:var(--bf-slate);
+  line-height:1.75;
+  font-size:.98rem;
+}
+
+/* Results section */
+.results{
+  background:transparent !important;
+  border-top:1px solid var(--bf-border);
+  border-bottom:1px solid var(--bf-border);
+  max-width:none;
+}
+.results .section-header{ max-width:var(--bf-max); margin:0 auto 2.75rem; padding:0 24px; }
+.results-grid{
+  max-width:var(--bf-max);
+  margin:0 auto;
+  padding:0 24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:16px;
+}
+.result-card{
+  background:var(--bf-card);
+  border:1px solid var(--bf-border);
+  border-radius:var(--bf-radius);
+  padding:22px;
+  text-align:left;
+  transition:border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+.result-card:hover{
+  border-color:rgba(37,99,235,.35);
+  transform:translateY(-1px);
+  box-shadow: var(--bf-shadow);
+}
+.result-number{
+  font-size:1.9rem;
+  font-weight:900;
+  color:var(--bf-ink);
+  background:none !important;
+  -webkit-background-clip:initial !important;
+  background-clip:initial !important;
+  margin-bottom:.5rem;
+  line-height:1.1;
+}
+.result-description{
+  font-size:.98rem;
+  color:var(--bf-slate);
+  line-height:1.7;
+}
+
+/* Resources */
+.resources-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+  gap:16px;
+}
+.resource-card{
+  background:var(--bf-card);
+  border:1px solid var(--bf-border);
+  border-radius:var(--bf-radius);
+  padding:20px;
+  transition:border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+  position:relative;
+  overflow:hidden;
+}
+.resource-card::after{ display:none !important; }
+.resource-card:hover{
+  border-color:rgba(37,99,235,.35);
+  transform:translateY(-1px);
+  box-shadow: var(--bf-shadow);
+}
+.resource-card h3{
+  font-size:1.05rem;
+  font-weight:850;
+  margin-bottom:.75rem;
+  color:var(--bf-ink);
+  line-height:1.35;
+}
+.resource-card ul{
+  margin:0;
+  padding-left:1.2rem;
+  font-size:.95rem;
+  color:var(--bf-slate);
+  line-height:1.75;
+}
+.resource-card li{ margin-bottom:.35rem; }
+
+/* CTA section */
+.cta-section{
+  background:var(--bf-card);
+  border:1px solid var(--bf-border);
+  border-radius:calc(var(--bf-radius) + 4px);
+  padding:3.25rem 24px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  margin:3rem auto;
+  max-width:var(--bf-max);
+  box-shadow: var(--bf-shadow);
+}
+.cta-section::before{ display:none !important; }
+.cta-section h2{
+  font-size:2.15rem;
+  font-weight:900;
+  margin-bottom:.75rem;
+  letter-spacing:-0.02em;
+  color:var(--bf-ink);
+  position:relative;
+  z-index:1;
+}
+.cta-section p{
+  font-size:1.05rem;
+  color:var(--bf-slate);
+  margin-bottom:1.5rem;
+  position:relative;
+  z-index:1;
+}
+.cta-buttons{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+/* Footer */
+footer{
+  background:var(--bf-card);
+  border-top:1px solid var(--bf-border);
+  padding:3rem 24px 1.5rem;
+}
+.footer-content{
+  max-width:var(--bf-max);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:24px;
+  margin-bottom:1.75rem;
+}
+.footer-section h4{
+  color:var(--bf-ink);
+  font-size:.9rem;
+  font-weight:900;
+  margin-bottom:.75rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.footer-section p, .footer-section a{
+  font-size:.95rem;
+  color:var(--bf-slate);
+  text-decoration:none;
+  line-height:1.9;
+  transition:color .15s ease;
+}
+.footer-section a:hover{ color:var(--bf-accent); }
+.footer-bottom{
+  max-width:var(--bf-max);
+  margin:0 auto;
+  padding-top:1.25rem;
+  border-top:1px solid var(--bf-border);
+  text-align:center;
+  font-size:.9rem;
+  color:var(--bf-muted);
+}
+
+/* Soft scroll fade */
+.fade-in{ opacity:0; transform:translateY(12px); transition:opacity .45s ease, transform .45s ease; }
+.fade-in.visible{ opacity:1; transform:translateY(0); }
+
+/* Responsive */
+@media (max-width: 768px){
+  .hero{ padding:3.75rem 18px 2.5rem; }
+  .hero h1{ font-size:2.15rem; }
+  .hero p{ font-size:1.02rem; }
+
+  .section-title{ font-size:1.75rem; }
+  .nav-links{ display:none; }
+
+  .services-grid, .resources-grid, .image-grid{ grid-template-columns:1fr; }
+  .cta-section h2{ font-size:1.75rem; }
+
+  .video-hero{ height:260px; margin:1.5rem auto 0; }
+  .video-content h2{ font-size:1.55rem; }
+  section{ padding:4rem 18px; }
+}
+
+
+/* === Contrast Enhancements === */
+
+/* Accent underline for section titles */
+.section-title{
+  position: relative;
+}
+.section-title::after{
+  content:"";
+  display:block;
+  width:56px;
+  height:3px;
+  margin:14px auto 0;
+  background: linear-gradient(90deg, var(--bf-accent), var(--bf-accent-2));
+  border-radius:2px;
+}
+
+/* Subtle section separation */
+section:nth-of-type(even){
+  background: linear-gradient(180deg, #ffffff 0%, #f4f7fb 100%);
+  border-top:1px solid var(--bf-border);
+  border-bottom:1px solid var(--bf-border);
+}
+
+/* Stronger card contrast */
+.service-card,
+.result-card,
+.resource-card,
+.stat-card{
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+}
+
+/* Add left accent bar to service cards */
+.service-card{
+  border-left:4px solid transparent;
+}
+.service-card:hover{
+  border-left:4px solid var(--bf-accent);
+}
+
+/* Hero visual contrast */
+.hero{
+  background:
+    radial-gradient(600px 200px at 10% 0%, rgba(37,99,235,.08), transparent 60%),
+    radial-gradient(600px 200px at 90% 10%, rgba(14,165,164,.08), transparent 60%);
+}
+
+/* CTA emphasis */
+.cta-section{
+  background:
+    linear-gradient(135deg, rgba(37,99,235,.06), rgba(14,165,164,.06)),
+    var(--bf-card);
+}
+
+
+/* === Typography Contrast Enhancements === */
+
+/* Slightly richer typographic scale + tighter rhythm */
+body{
+  font-size: 16.5px;
+  letter-spacing: -0.01em;
+}
+
+/* Headings: heavier weight, tighter tracking, improved readability */
+.hero h1{
+  font-weight: 900;
+  letter-spacing: -0.045em;
+}
+
+.section-title{
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+/* Make subtitles calmer and a bit narrower for a more premium look */
+.section-subtitle{
+  color: var(--bf-muted);
+  max-width: 760px;
+}
+
+/* Card headings pop more */
+.service-card h3,
+.result-card .result-number,
+.resource-card h3{
+  letter-spacing: -0.02em;
+}
+
+/* Improve paragraph readability slightly */
+.hero p,
+.service-card p,
+.result-description,
+.resource-card ul{
+  color: var(--bf-slate);
+}
+
+/* Desktop scale bump without affecting mobile */
+@media (min-width: 1024px){
+  .hero h1{ font-size: 3.35rem; }
+  .section-title{ font-size: 2.35rem; }
+}
+
+
+/* === Owner's Edge Emphasis === */
+.service-card--featured{
+  border-color: rgba(14,165,164,.35);
+  box-shadow: 0 16px 40px rgba(2,6,23,.10);
+  background: linear-gradient(135deg, rgba(14,165,164,.06), rgba(37,99,235,.05)), #fff;
+  position: relative;
+}
+.service-card--featured:hover{
+  border-color: rgba(14,165,164,.55);
+}
+.pkg-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  border:1px solid rgba(14,165,164,.28);
+  background: rgba(14,165,164,.10);
+  color: var(--bf-accent-2);
+  margin-bottom:10px;
+}
+.pkg-badge__dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background: var(--bf-accent-2);
+  box-shadow: 0 0 0 3px rgba(14,165,164,.12);
+}
+
+/* === Client Path (Flow) === */
+.flow{ margin-top: 1.5rem; }
+.flow-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:16px;
+  margin-top: 1.5rem;
+}
+.flow-card{
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+  border:1px solid var(--bf-border);
+  border-radius: var(--bf-radius);
+  padding: 22px;
+  box-shadow: var(--bf-shadow);
+  position: relative;
+  overflow:hidden;
+}
+.flow-step{
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: .78rem;
+  color: var(--bf-muted);
+  margin-bottom: 10px;
+}
+.flow-title{
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--bf-ink);
+  margin-bottom: 8px;
+}
+.flow-desc{
+  color: var(--bf-slate);
+  line-height: 1.75;
+  font-size: .98rem;
+}
+.flow-kicker{
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border:1px dashed rgba(37,99,235,.25);
+  background: rgba(37,99,235,.05);
+  color: var(--bf-slate);
+  font-size: .95rem;
+}
+.flow-kicker strong{ color: var(--bf-ink); }
+
+</style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="logo">BELFLOWER FINANCE</div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-it-works">How it works</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      FRACTIONAL CFO FOR MULTI-SITE & SEASONAL OPERATORS
+    </div>
+    <h1>Financial <span class="highlight">clarity</span> that scales with you</h1>
+    <p>
+      I help operators build cash visibility, forecasting discipline, and decision-ready reporting - so growth is intentional, not stressful.
+      Get CFO-level guidance without the full-time overhead.
+    </p>
+    <div class="cta-group">
+      <a href="#contact" class="cta-primary">
+        Book a Free Financial Quick Look
+        <span>→</span>
+      </a>
+      <a href="#services" class="cta-secondary">
+        See How I Help
+        <span>↓</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-- Video Hero Section - Ready for your video -->
+    <div class="video-hero">
+        <!-- Replace the placeholder with your actual video URL:
+        <video class="video-bg" autoplay muted loop playsinline>
+            <source src="your-video-url.mp4" type="video/mp4">
+        </video>
+        -->
+        <div class="video-overlay">
+            <div class="video-content">
+                <h2>Built for $10M-$150M companies</h2>
+                <p>Strategic CFO expertise without the full-time cost</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-card fade-in">
+                <div class="stat-number">30%</div>
+                <div class="stat-label">Forecast accuracy improvement</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number">7</div>
+                <div class="stat-label">States managed</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number">$100M+</div>
+                <div class="stat-label">Portfolio oversight</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Years leadership experience</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+  <div class="section-header">
+    <div class="section-badge">Services</div>
+    <h2 class="section-title">CFO-level support focused on outcomes</h2>
+    <p class="section-subtitle">
+      Tools can generate forecasts. What most teams need is a steady rhythm: cash visibility, clear assumptions,
+      operator-friendly reporting, and decision support when it matters.
+    </p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card fade-in">
+      <div class="service-icon">💧</div>
+      <h3>Cash Clarity (13-week cash forecast)</h3>
+      <p>
+        A rolling cash view you can trust - updated on a consistent cadence, with specific actions tied to collections,
+        payables timing, and seasonality.
+      </p>
+    </div>
+
+    <div class="service-card fade-in">
+      <div class="service-icon">🧭</div>
+      <h3>Forecast to Action (12-month plan + scenarios)</h3>
+      <p>
+        A forward plan built for real decisions. We model best/base/worst cases, stress-test assumptions, and convert the plan into
+        a simple monthly operating rhythm.
+      </p>
+    </div>
+
+    <div class="service-card fade-in">
+      <div class="service-icon">📍</div>
+      <h3>Multi-site performance reporting</h3>
+      <p>
+        Consolidated location reporting with KPIs that drive behavior. Less noise, more signal - so leaders know what to fix and where
+        to invest.
+      </p>
+    </div>
+
+    <div class="service-card fade-in">
+      <div class="service-icon">🧪</div>
+      <h3>Decision modeling (pricing, hiring, CapEx)</h3>
+      <p>
+        Before you commit, we run the numbers and the trade-offs. Clear sensitivities, clear downside protection, and a recommendation
+        you can defend.
+      </p>
+    </div>
+
+    <div class="service-card fade-in">
+      <div class="service-icon">🧱</div>
+      <h3>Finance infrastructure that scales</h3>
+      <p>
+        Close process, chart of accounts, SOPs, controls, and reporting automation. Build a finance function that can grow without
+        adding chaos (or headcount) too early.
+      </p>
+    </div>
+
+    <div class="service-card fade-in">
+      <div class="service-icon">🤝</div>
+      <h3>Operator coaching + leadership cadence</h3>
+      <p>
+        I help owners, GMs, and department heads understand the numbers and run better meetings - turning your budget into an action plan,
+        not a spreadsheet.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <section class="flow" id="how-it-works">
+  <div class="section-header">
+    <div class="section-badge">How it works</div>
+    <h2 class="section-title">How clients typically work with me</h2>
+    <p class="section-subtitle">
+      Most engagements start with clarity, then build a rhythm. For many owners, the highest leverage is ongoing partnership
+      (Owner’s Edge) once the basics are stabilized.
+    </p>
+  </div>
+
+  <div class="flow-grid">
+    <div class="flow-card fade-in">
+      <div class="flow-step">Step 1</div>
+      <div class="flow-title">Quick Look → clear next steps</div>
+      <div class="flow-desc">
+        We review your current financial picture and identify the 2-3 actions that will create immediate clarity
+        (cash visibility, reporting, or decision support).
+      </div>
+      <div class="flow-kicker"><strong>Outcome:</strong> You leave with direction - even if we never work together.</div>
+    </div>
+
+    <div class="flow-card fade-in">
+      <div class="flow-step">Step 2</div>
+      <div class="flow-title">Stabilize the foundation</div>
+      <div class="flow-desc">
+        We build the practical tools: 13-week cash forecast, a usable 12-month plan, and reporting that leaders actually use.
+        The goal is fewer surprises and a consistent cadence.
+      </div>
+      <div class="flow-kicker"><strong>Good fit for:</strong> Cash Clarity or Forecast to Action.</div>
+    </div>
+
+    <div class="flow-card fade-in">
+      <div class="flow-step">Step 3</div>
+      <div class="flow-title">Owner’s Edge: ongoing CFO partnership</div>
+      <div class="flow-desc">
+        Once visibility is in place, we focus on the decisions: hiring, pricing, CapEx, expansion timing, and risk.
+        You get CFO-level judgment when it matters, without full-time overhead.
+      </div>
+      <div class="flow-kicker"><strong>Highest leverage:</strong> a trusted financial co-pilot for the decisions that drive outcomes.</div>
+    </div>
+  </div>
+</section>
+
+<section class="results" id="results">
+  <div class="section-header">
+    <div class="section-badge">Track Record</div>
+    <h2 class="section-title">Results that show up in cash, clarity, and execution</h2>
+    <p class="section-subtitle">
+      Examples of impact from finance leadership roles across multi-site operations. The specific approach always varies by business -
+      the goal is consistent: better visibility, better decisions, and fewer surprises.
+    </p>
+  </div>
+
+  <div class="results-grid">
+    <div class="result-card fade-in">
+      <div class="result-number">Long-term</div>
+      <div class="result-description">Supported major contract planning with multi-year pro forma modeling and scenario analysis.</div>
+    </div>
+    <div class="result-card fade-in">
+      <div class="result-number">Forecasting</div>
+      <div class="result-description">Improved forecast discipline by standardizing assumptions and building a repeatable monthly cadence.</div>
+    </div>
+    <div class="result-card fade-in">
+      <div class="result-number">Operations</div>
+      <div class="result-description">Built reporting that operators actually use - tying financial results to leading indicators and actions.</div>
+    </div>
+    <div class="result-card fade-in">
+      <div class="result-number">Efficiency</div>
+      <div class="result-description">Streamlined processes and reporting workflows to reduce manual effort and speed up close-to-insight.</div>
+    </div>
+    <div class="result-card fade-in">
+      <div class="result-number">Cost control</div>
+      <div class="result-description">Partnered with leaders on spend governance, capital planning, and variance follow-through.</div>
+    </div>
+    <div class="result-card fade-in">
+      <div class="result-number">Scale</div>
+      <div class="result-description">Led finance support across multiple locations and stakeholders, keeping reporting consistent as complexity grew.</div>
+    </div>
+  </div>
+</section>
+
+    <section id="resources">
+        <div class="section-header">
+            <div class="section-badge">Free Resources</div>
+            <h2 class="section-title">Financial frameworks you can use today</h2>
+            <p

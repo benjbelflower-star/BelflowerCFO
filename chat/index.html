@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Belflower Finance | Let's Chat</title>
+  <meta name="description" content="A 30-minute clarity call for multi-site and seasonal business owners." />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800;850&display=swap');
+
+    :root{
+      --ink:#0B1220;
+      --slate:#334155;
+      --muted:#64748B;
+      --bg:#F8FAFC;
+      --card:#FFFFFF;
+      --border:#E2E8F0;
+      --accent:#3B5C7E;
+      --accent-soft:#E2E8F0;
+      --radius:12px;
+      --shadow:0 10px 30px rgba(2,6,23,.08);
+      --max:1120px;
+      --font:'Manrope', Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    *{ box-sizing:border-box; margin:0; padding:0; }
+
+    body{
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--ink);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    .container{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    /* HERO */
+    .hero{
+      padding: 90px 0 56px;
+      background:
+        radial-gradient(700px 240px at 12% 10%, rgba(59,92,126,.12), transparent 60%),
+        radial-gradient(700px 240px at 88% 15%, rgba(71,110,149,.10), transparent 60%),
+        var(--bg);
+      border-bottom:1px solid var(--border);
+    }
+
+    .badge{
+      display:inline-block;
+      font-size:.78rem;
+      font-weight:800;
+      letter-spacing:.12em;
+      color:var(--accent);
+      text-transform:uppercase;
+      background:rgba(59,92,126,.10);
+      border:1px solid rgba(59,92,126,.25);
+      padding:.45rem .9rem;
+      border-radius:999px;
+      margin-bottom:14px;
+    }
+
+    h1{
+      font-size:clamp(2.1rem, 4vw, 3.1rem);
+      font-weight:850;
+      letter-spacing:-0.035em;
+      line-height:1.12;
+      margin-bottom:12px;
+      font-family:var(--font);
+    }
+
+    .subhead{
+      max-width:720px;
+      font-size:1.12rem;
+      color:var(--slate);
+      margin-bottom:18px;
+      line-height:1.8;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+
+    .cta-primary,
+    .cta-secondary{
+      display:inline-flex;
+      align-items:center;
+      gap:.6rem;
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:.98rem;
+      transition:transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease, color .15s ease;
+    }
+
+    .cta-primary{
+      background:var(--accent);
+      color:#fff;
+      border:1px solid rgba(37,99,235,.2);
+      box-shadow:0 10px 18px rgba(37,99,235,.18);
+    }
+
+    .cta-primary:hover{
+      transform:translateY(-1px);
+      box-shadow:0 14px 24px rgba(37,99,235,.22);
+    }
+
+    .cta-secondary{
+      border:1px solid var(--border);
+      color:var(--ink);
+      background:transparent;
+    }
+
+    .cta-secondary:hover{
+      border-color:rgba(37,99,235,.35);
+      background:rgba(37,99,235,.06);
+    }
+
+    .micro{
+      font-size:.95rem;
+      color:var(--muted);
+      max-width:720px;
+    }
+
+    /* FIT */
+    .fit{
+      padding: 64px 0 76px;
+      background:#fff;
+    }
+
+    .center{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 28px;
+    }
+
+    h2{
+      font-size:clamp(1.6rem, 2.4vw, 2.2rem);
+      font-weight:850;
+      letter-spacing:-0.02em;
+      line-height:1.2;
+      margin-bottom:10px;
+    }
+
+    .fit-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .card h3{
+      font-size:1.05rem;
+      font-weight:800;
+      margin-bottom:10px;
+    }
+
+    ul{
+      padding-left:1.1rem;
+      color:var(--slate);
+    }
+
+    li{ margin-bottom:8px; }
+
+    .final-cta{
+      text-align:center;
+      margin-top:24px;
+    }
+    .headshot-note{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:24px;
+      max-width:760px;
+      margin: 0 auto 48px;
+      padding: 10px 22px 0;
+    }
+
+    .headshot-stack{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:8px;
+      text-align:center;
+      flex:0 0 auto;
+    }
+
+    .headshot-stack img{
+      width:88px;
+      height:88px;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid var(--border);
+      box-shadow:0 10px 22px rgba(2,6,23,.12);
+    }
+
+    .headshot-meta{
+      font-size:.95rem;
+      color:var(--slate);
+      line-height:1.25;
+    }
+
+    .quote-block{
+      max-width:420px;
+      color:var(--ink);
+    }
+
+    .quote-block p{
+      margin-bottom:8px;
+    }
+
+    @media (max-width:860px){
+      .headshot-note{
+        flex-direction:column;
+        text-align:center;
+      }
+      .fit-grid{ grid-template-columns:1fr; }
+      .hero{ padding-top:70px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="container">
+      <span class="badge">FRACTIONAL CFO • MULTI-SITE • SEASONAL</span>
+
+      <h1>Financial clarity for owners who can't afford to guess.</h1>
+
+      <p class="subhead">
+        If your P&amp;L looks fine but cash feels tight, decisions feel heavier than they should,
+        or growth is outpacing your reporting—let's fix the visibility problem first.
+      </p>
+
+      <div class="cta-row">
+        <a class="cta-primary" href="https://calendly.com/benjbelflower/introduction-chat" target="_blank">
+          Let's chat (30 minutes)
+        </a>
+        <a class="cta-secondary" href="#fit">
+          Am I a fit?
+        </a>
+      </div>
+
+      <p class="micro">
+        No pitch deck. No obligation. Just a quick working session to surface what matters most and what to do next.
+      </p>
+    </div>
+  </section>
+
+  <section id="fit" class="fit">
+    <div class="container">
+      <div class="center">
+        <h2>A fast way to see if we should talk</h2>
+        <p class="subhead">
+          This call is best when you want clearer cash visibility and better decision support—without hiring a full-time CFO.
+        </p>
+      </div>
+
+      <div class="fit-grid">
+        <div class="card">
+          <h3>Great fit if…</h3>
+          <ul>
+            <li>You manage seasonality, multiple locations, or operational complexity.</li>
+            <li>You feel reactive instead of confident when making decisions.</li>
+            <li>Cash timing creates stress.</li>
+            <li>You want clarity before hiring, pricing, or expanding.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Probably not a fit if…</h3>
+          <ul>
+            <li>You're only looking for bookkeeping or tax filing.</li>
+            <li>You want analysis without accountability.</li>
+            <li>You're avoiding tough cash conversations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="final-cta">
+        <a class="cta-primary" href="https://calendly.com/benjbelflower/introduction-chat" target="_blank">
+          Let's chat (30 minutes)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="headshot-note">
+    <div class="headshot-stack">
+      <img src="/assets/Casual12.jpg" alt="Ben Belflower">
+      <div class="headshot-meta">
+        <div>Ben Belflower,</div>
+        <div>BelflowerCFO</div>
+      </div>
+    </div>
+    <div class="quote-block">
+      <p><strong>I'm looking forward to our conversation.</strong></p>
+      <p>We'll use the time to get clear on what matters most and what to do next.</p>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
