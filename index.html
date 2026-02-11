@@ -6,7 +6,7 @@
     <title>Belflower Finance | Fractional CFO for Multi-Site & Seasonal Owners</title>
     <meta name="description" content="Fractional CFO for multi-site and seasonal businesses. Cash clarity, forecasting, dashboards, and decision support without a full-time CFO.">
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@600&display=swap');
 
 /* Belflower Finance - Light, modern, professional skin
    Drop-in replacement for the existing <style> block.
@@ -67,21 +67,29 @@ nav{
 }
 
 .logo{
-  font-size:1.05rem;
-  font-weight:750;
+  font-size:1.12rem;
+  font-weight:600;
   letter-spacing:-0.02em;
   color:var(--bf-ink);
+  text-decoration:none;
   background:none !important;
   -webkit-background-clip:initial !important;
   background-clip:initial !important;
   display:flex;
   align-items:center;
   gap:.6rem;
+  font-family:'Montserrat', 'Manrope', Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  text-transform:uppercase;
+  line-height:1;
 }
-.logo img{
-  height:56px;
-  width:auto;
-  display:block;
+.logo-wordmark{
+  display:inline-block;
+  color:var(--bf-ink);
+  font-family:'Montserrat', 'Manrope', Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+  line-height:1;
 }
 
 .nav-links{
@@ -817,10 +825,8 @@ footer{
   align-items:center;
   margin-bottom:12px;
 }
-.footer-logo img{
-  height:44px;
-  width:auto;
-  display:block;
+.footer-logo .logo-wordmark{
+  font-size:1.08rem;
 }
 .footer-content{
   max-width:var(--bf-max);
@@ -861,9 +867,10 @@ footer{
   position:fixed;
   right:18px;
   bottom:18px;
-  width:56px;
-  height:56px;
-  border-radius:50%;
+  width:auto;
+  height:auto;
+  border-radius:999px;
+  padding:10px 14px;
   background:rgba(248,250,252,.92);
   border:1px solid var(--bf-border);
   box-shadow:0 10px 24px rgba(2,6,23,.18);
@@ -878,11 +885,9 @@ footer{
   border-color:rgba(37,99,235,.35);
   box-shadow:0 14px 28px rgba(2,6,23,.22);
 }
-.back-to-top img{
-  width:42px;
-  height:42px;
-  object-fit:contain;
-  display:block;
+.back-to-top .logo-wordmark{
+  font-size:.78rem;
+  letter-spacing:.02em;
 }
 
 
@@ -1044,7 +1049,7 @@ body::before{
     <nav>
         <div class="nav-container">
             <a class="logo" href="#top" aria-label="Back to top">
-                <img src="/assets/LOGO4.jpg" alt="Belflower Finance">
+                <span class="logo-wordmark">BELFLOWER|CFO</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
@@ -1597,7 +1602,7 @@ body::before{
       <div class="footer-content">
         <div class="footer-section">
           <div class="footer-logo">
-            <img src="/assets/LOGO4.jpg" alt="Belflower Finance">
+            <span class="logo-wordmark">BELFLOWER|CFO</span>
           </div>
           <h4>Belflower Finance</h4>
           <p>Fractional CFO support for multi-site and seasonal Owners.</p>
@@ -1633,7 +1638,7 @@ body::before{
     </footer>
 
     <a href="#top" class="back-to-top" aria-label="Back to top">
-      <img src="/assets/LOGO4.jpg" alt="Belflower Finance logo">
+      <span class="logo-wordmark">BELFLOWER|CFO</span>
     </a>
 
     <script>
@@ -1649,6 +1654,10 @@ body::before{
     </script>
 </body>
 </html>
+
+
+
+
 
 
 
