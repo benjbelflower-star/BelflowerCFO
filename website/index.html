@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Belflower Finance | Fractional CFO for Multi-Site & Seasonal Owners</title>
     <meta name="description" content="Fractional CFO for multi-site and seasonal businesses. Cash clarity, forecasting, dashboards, and decision support without a full-time CFO.">
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@600&display=swap');
 
 /* Belflower Finance - Light, modern, professional skin
    Drop-in replacement for the existing <style> block.
@@ -77,11 +77,16 @@ nav{
   display:flex;
   align-items:center;
   gap:.6rem;
+  text-decoration:none;
 }
-.logo img{
-  height:56px;
-  width:auto;
-  display:block;
+.logo-wordmark{
+  display:inline-block;
+  color:var(--bf-ink);
+  font-family:'Montserrat', 'Manrope', Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+  line-height:1;
 }
 
 .nav-links{
@@ -136,6 +141,7 @@ section{
   border:1px solid rgba(37,99,235,.25);
   padding:.45rem 1rem;
   border-radius:999px;
+  padding:10px 14px;
   font-size:.80rem;
   font-weight:700;
   color:var(--bf-accent);
@@ -189,7 +195,8 @@ section{
   height:240px;
   object-fit:cover;
   object-position:50% 20%;
-  border-radius:50%;
+  border-radius:999px;
+  padding:10px 14px;
   box-shadow: 0 12px 26px rgba(2,6,23,.15);
 }
 .who-caption{
@@ -249,6 +256,7 @@ section{
   gap:.6rem;
   padding:12px 18px;
   border-radius:999px;
+  padding:10px 14px;
   text-decoration:none;
   font-weight:700;
   font-size:.98rem;
@@ -313,6 +321,7 @@ section{
   border:1px solid rgba(37,99,235,.18);
   padding:.45rem 1rem;
   border-radius:999px;
+  padding:10px 14px;
   font-size:.78rem;
   font-weight:800;
   color:var(--bf-accent);
@@ -510,6 +519,7 @@ a.service-card{
   border:1px solid rgba(59,92,126,.25);
   padding:.35rem .6rem;
   border-radius:999px;
+  padding:10px 14px;
 }
 .package-tagline{
   color:var(--bf-accent);
@@ -583,6 +593,7 @@ a.service-card{
   width:32px;
   height:32px;
   border-radius:999px;
+  padding:10px 14px;
   margin:0 auto 6px;
   display:flex;
   align-items:center;
@@ -605,6 +616,7 @@ a.service-card{
   height:2px;
   background:var(--bf-border);
   border-radius:999px;
+  padding:10px 14px;
 }
 .fr-summary-footer{
   margin-top:.8rem;
@@ -656,6 +668,7 @@ a.service-card{
   height:2px;
   background:var(--bf-border);
   border-radius:999px;
+  padding:10px 14px;
 }
 .pf-mini-arrow{
   font-size:1.05rem;
@@ -817,10 +830,8 @@ footer{
   align-items:center;
   margin-bottom:12px;
 }
-.footer-logo img{
-  height:44px;
-  width:auto;
-  display:block;
+.footer-logo .logo-wordmark{
+  font-size:1.08rem;
 }
 .footer-content{
   max-width:var(--bf-max);
@@ -861,9 +872,10 @@ footer{
   position:fixed;
   right:18px;
   bottom:18px;
-  width:56px;
-  height:56px;
-  border-radius:50%;
+  width:auto;
+  height:auto;
+  border-radius:999px;
+  padding:10px 14px;
   background:rgba(248,250,252,.92);
   border:1px solid var(--bf-border);
   box-shadow:0 10px 24px rgba(2,6,23,.18);
@@ -878,11 +890,9 @@ footer{
   border-color:rgba(37,99,235,.35);
   box-shadow:0 14px 28px rgba(2,6,23,.22);
 }
-.back-to-top img{
-  width:42px;
-  height:42px;
-  object-fit:contain;
-  display:block;
+.back-to-top .logo-wordmark{
+  font-size:.78rem;
+  letter-spacing:.02em;
 }
 
 
@@ -921,7 +931,7 @@ footer{
 .section-title::after{
   content:"";
   display:block;
-  width:56px;
+  width:auto;
   height:3px;
   margin:14px auto 0;
   background: linear-gradient(90deg, var(--bf-accent), var(--bf-accent-2));
@@ -1044,7 +1054,7 @@ body::before{
     <nav>
         <div class="nav-container">
             <a class="logo" href="#top" aria-label="Back to top">
-                <img src="LOGO4.jpg" alt="Belflower Finance">
+                <span class="logo-wordmark">BELFLOWER|CFO</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
@@ -1361,7 +1371,7 @@ body::before{
               </text>
               <text x="140" y="96" text-anchor="middle"
                     font-size="12" fill="var(--bf-muted)">
-                Weeks 0â€“1
+                Weeks 0–1
               </text>
 
               <!-- Zone 2 -->
@@ -1373,7 +1383,7 @@ body::before{
               </text>
               <text x="350" y="96" text-anchor="middle"
                     font-size="12" fill="var(--bf-muted)">
-                Weeks 2â€“4
+                Weeks 2–4
               </text>
 
               <!-- Zone 3 -->
@@ -1385,7 +1395,7 @@ body::before{
               </text>
               <text x="580" y="96" text-anchor="middle"
                     font-size="12" fill="var(--bf-muted)">
-                Weeks 5â€“9
+                Weeks 5–9
               </text>
 
               <!-- Zone 4 -->
@@ -1397,13 +1407,13 @@ body::before{
               </text>
               <text x="780" y="96" text-anchor="middle"
                     font-size="12" fill="var(--bf-muted)">
-                Weeks 10â€“13
+                Weeks 10–13
               </text>
 
             </svg>
 
             <div class="cash-zones-caption">
-              Cash problems donâ€™t appear suddenly â€” they move through predictable zones.
+              Cash problems don’t appear suddenly — they move through predictable zones.
             </div>
           </div>
           <div class="package-intro">
@@ -1477,7 +1487,7 @@ body::before{
 
             <div class="pf-mini-bridge" aria-hidden="true">
               <div class="pf-mini-line"></div>
-              <div class="pf-mini-arrow">â†’</div>
+              <div class="pf-mini-arrow">?</div>
             </div>
 
             <div class="pf-mini-col pf-mini-col--right">
@@ -1524,7 +1534,7 @@ body::before{
                   <div class="fr-summary-pill">1</div>
                   <div class="fr-summary-title">Stabilize Cash</div>
                   <div class="fr-summary-sub">
-                    See where pressure is coming from â€” and when.
+                    See where pressure is coming from — and when.
                   </div>
                 </div>
 
@@ -1551,7 +1561,7 @@ body::before{
               </div>
 
               <div class="fr-summary-footer">
-                This reset creates a new baseline â€” so decisions stop feeling reactive.
+                This reset creates a new baseline — so decisions stop feeling reactive.
               </div>
 
             </div>
@@ -1591,7 +1601,7 @@ body::before{
       <div class="footer-content">
         <div class="footer-section">
           <div class="footer-logo">
-            <img src="LOGO4.jpg" alt="Belflower Finance">
+            <span class="logo-wordmark">BELFLOWER|CFO</span>
           </div>
           <h4>Belflower Finance</h4>
           <p>Fractional CFO support for multi-site and seasonal Owners.</p>
@@ -1627,7 +1637,7 @@ body::before{
     </footer>
 
     <a href="#top" class="back-to-top" aria-label="Back to top">
-      <img src="LOGO4.jpg" alt="Belflower Finance logo">
+      <span class="logo-wordmark">BELFLOWER|CFO</span>
     </a>
 
     <script>
@@ -1643,3 +1653,11 @@ body::before{
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+

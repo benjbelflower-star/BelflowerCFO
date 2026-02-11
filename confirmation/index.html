@@ -6,7 +6,7 @@
   <title>Belflower Finance | Booking Confirmed</title>
   <meta name="description" content="Your booking is confirmed. Download your free gift and explore the next best resource.">
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@600&display=swap');
 
 * { margin:0; padding:0; box-sizing:border-box; }
 
@@ -71,10 +71,14 @@ nav{
   gap:.6rem;
   text-decoration:none;
 }
-.logo img{
-  height:56px;
-  width:auto;
-  display:block;
+.logo-wordmark{
+  display:inline-block;
+  color:var(--bf-ink);
+  font-family:'Montserrat', 'Manrope', Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+  line-height:1;
 }
 
 .nav-links{
@@ -735,10 +739,8 @@ footer{
   border-top:1px solid var(--bf-border);
   padding:3rem 24px 1.5rem;
 }
-.footer-logo img{
-  height:44px;
-  width:auto;
-  display:block;
+.footer-logo .logo-wordmark{
+  font-size:1.08rem;
 }
 .footer-content{
   max-width:var(--bf-max);
@@ -792,7 +794,7 @@ footer{
   <nav>
     <div class="nav-container">
       <a class="logo" href="/index.html#top">
-        <img src="/assets/LOGO6_lessBG.png" alt="Belflower Finance">
+        <span class="logo-wordmark">BELFLOWER|CFO</span>
       </a>
       <ul class="nav-links"></ul>
     </div>
@@ -1142,7 +1144,7 @@ footer{
     <div class="footer-content">
       <div class="footer-section">
         <a class="footer-logo" href="/index.html#top">
-          <img src="/assets/LOGO6_lessBG.png" alt="Belflower Finance">
+          <span class="logo-wordmark">BELFLOWER|CFO</span>
         </a>
         <h4>Belflower Finance</h4>
         <p>Fractional CFO support for multi-site and seasonal Owners.</p>
@@ -1320,6 +1322,14 @@ footer{
   </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
 
 
 
