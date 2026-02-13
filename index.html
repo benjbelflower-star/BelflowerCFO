@@ -373,14 +373,15 @@ section{
 }
 .stat-card::before{ display:none !important; }
 .stat-number{
-  font-size:2.2rem;
-  font-weight:850;
+  font-size:1.25rem;
+  font-weight:800;
+  letter-spacing:-0.02em;
   color:var(--bf-ink);
   background:none !important;
   -webkit-background-clip:initial !important;
   background-clip:initial !important;
-  line-height:1.1;
-  margin-bottom:.25rem;
+  line-height:1.25;
+  margin-bottom:.4rem;
 }
 .stat-label{ font-size:.95rem; color:var(--bf-muted); font-weight:650; }
 
@@ -407,7 +408,6 @@ section{
   transform:translateY(-1px);
   box-shadow: var(--bf-shadow);
 }
-.service-icon{ font-size:1.6rem; margin-bottom:10px; }
 .service-card h3{
   font-size:1.15rem;
   font-weight:800;
@@ -742,6 +742,32 @@ a.service-card{
   line-height:1.7;
 }
 
+/* Home insights strip */
+.home-insights-row{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  padding-bottom:4px;
+}
+.home-insight-card{
+  flex:0 0 360px;
+  display:block;
+  background:var(--bf-card);
+  border:1px solid var(--bf-border);
+  border-radius:12px;
+  padding:14px 16px;
+  text-decoration:none;
+  color:var(--bf-ink);
+  font-weight:800;
+  line-height:1.35;
+  transition:border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+.home-insight-card:hover{
+  border-color:rgba(37,99,235,.35);
+  transform:translateY(-1px);
+  box-shadow: var(--bf-shadow);
+}
+
 /* Resources */
 .resources-grid{
   display:grid;
@@ -905,6 +931,7 @@ footer{
   .nav-links{ display:none; }
 
   .services-grid, .resources-grid, .image-grid{ grid-template-columns:1fr; }
+  .home-insight-card{ flex:0 0 300px; }
   .cta-section h2{ font-size:1.75rem; }
 
   .video-hero{ height:260px; margin:1.5rem auto 0; }
@@ -1090,16 +1117,16 @@ body::before{
                 <div class="stat-label">Forecast accuracy improvement</div>
             </div>
             <div class="stat-card fade-in">
-                <div class="stat-number">7</div>
-                <div class="stat-label">States managed</div>
+                <div class="stat-number">180+</div>
+                <div class="stat-label">Profit Centers Re-structured</div>
             </div>
             <div class="stat-card fade-in">
                 <div class="stat-number">$100M+</div>
                 <div class="stat-label">Portfolio oversight</div>
             </div>
             <div class="stat-card fade-in">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Years leadership experience</div>
+                <div class="stat-number">Executive-level</div>
+                <div class="stat-label">Owner &amp; GM Advisory</div>
             </div>
         </div>
     </section>
@@ -1138,31 +1165,26 @@ body::before{
 
   <div class="services-grid">
     <a href="#cash-clarity" class="service-card fade-in">
-      <div class="service-icon">&#128167;</div>
       <h3>Cash Clarity Package</h3>
       <p>13-week rolling cash flow, weekly alerts, and working capital strategies.</p>
     </a>
 
     <a href="#forecast-to-action" class="service-card fade-in">
-      <div class="service-icon">&#128202;</div>
       <h3>Forecast to Action</h3>
       <p>12-month forecasting with scenario planning and KPI dashboards.</p>
     </a>
 
     <a href="#owners-edge" class="service-card fade-in">
-      <div class="service-icon">&#128161;</div>
       <h3>Owner&rsquo;s Edge</h3>
       <p>Strategic finance partner with ongoing founder/GM coaching.</p>
     </a>
 
     <a href="#pro-forma-modeling" class="service-card fade-in">
-      <div class="service-icon">&#128221;</div>
       <h3>Pro Forma &amp; Financial Modeling</h3>
       <p>Investor/bid-ready models with scenario analysis.</p>
     </a>
 
     <a href="#financial-reset" class="service-card fade-in">
-      <div class="service-icon">&#128295;</div>
       <h3>Financial Reset Intensive</h3>
       <p>One-time deep dive with an action plan for rapid improvement.</p>
     </a>
@@ -1206,6 +1228,23 @@ body::before{
         <div class="industry-card fade-in">Outdoor Recreation &amp; Tourism</div>
         <div class="industry-card fade-in">Property Management Firms</div>
       </div>
+    </section>
+
+    <section id="insights-home">
+      <div class="section-header">
+        <div class="section-badge">Insights</div>
+        <h2 class="section-title">Insights</h2>
+        <p class="section-subtitle">Perspectives on liquidity, forecasting, and decision support for growing hospitality groups.</p>
+      </div>
+      <div class="home-insights-row">
+        <a class="home-insight-card fade-in" href="insights/profit-on-paper-panic-in-the-bank-account/">
+          Profit on Paper, Panic in the Bank Account
+        </a>
+        <a class="home-insight-card fade-in" href="insights/why-good-financial-reporting-still-leads-to-bad-decisions/">
+          Why &ldquo;Good&rdquo; Financial Reporting Still Leads to Bad Decisions
+        </a>
+      </div>
+    </section>
 <!--TODO: Re-enable when we have 2-3 real case studies with metrics.
     -->
 <!--    
@@ -1266,10 +1305,10 @@ body::before{
   -->
 
     <section class="cta-section" id="contact">
-      <h2>Book a Free Financial Quick Look</h2>
+      <h2>Schedule a 30-Minute Financial Review</h2>
       <p>30 minutes, no strings attached. We&rsquo;ll review your numbers and identify 2&ndash;3 actions you can take right now.</p>
       <div class="cta-buttons">
-        <a href="https://calendly.com/benjbelflower/free-financial-quick-look-financial-reset-clone?a1=Free%20Financial%20Quick%20Look" class="cta-primary" target="_blank" rel="noopener">Book a Free Financial Quick Look</a>
+        <a href="https://calendly.com/benjbelflower/free-financial-quick-look-financial-reset-clone?a1=Free%20Financial%20Quick%20Look" class="cta-primary" target="_blank" rel="noopener">Schedule a 30-Minute Financial Review</a>
       <!-- TODO: Re-enable when we have 2-3 case studies with metrics. 
         <a href="#resources" class="cta-secondary">Browse Free Resources</a>
       -->
@@ -1345,7 +1384,7 @@ body::before{
               target="_blank"
               rel="noopener"
             >
-              Book a Free Financial Quick Look
+              Explore This Partnership
             </a>
 
           </footer>
@@ -1438,7 +1477,7 @@ body::before{
           </div>
           <div class="section-callout package-outcome">Outcome: You know what&rsquo;s coming and what decisions are safe to make before cash becomes a problem.</div>
           <div class="package-cta">
-            <a href="https://calendly.com/benjbelflower/free-financial-quick-look-cash-clarity?a1=Cash%20Clarity" class="cta-primary" target="_blank" rel="noopener">Book a Free Financial Quick Look</a>
+            <a href="https://calendly.com/benjbelflower/free-financial-quick-look-cash-clarity?a1=Cash%20Clarity" class="cta-primary" target="_blank" rel="noopener">Review My Cash Structure</a>
           </div>
         </article>
 
@@ -1581,7 +1620,7 @@ body::before{
           </div>
           <div class="section-callout package-outcome">Outcome: Clear priorities and a path forward.</div>
           <div class="package-cta">
-            <a href="https://calendly.com/benjbelflower/free-financial-quick-look-financial-reset-intensive?a1=Financial%20Reset" class="cta-primary" target="_blank" rel="noopener">Book a Free Financial Quick Look</a>
+            <a href="https://calendly.com/benjbelflower/free-financial-quick-look-financial-reset-intensive?a1=Financial%20Reset" class="cta-primary" target="_blank" rel="noopener">Schedule a Reset Review</a>
           </div>
         </article>
       </div>
