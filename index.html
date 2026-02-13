@@ -744,13 +744,11 @@ a.service-card{
 
 /* Home insights strip */
 .home-insights-row{
-  display:flex;
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
   gap:14px;
-  overflow-x:auto;
-  padding-bottom:4px;
 }
 .home-insight-card{
-  flex:0 0 360px;
   display:block;
   background:var(--bf-card);
   border:1px solid var(--bf-border);
@@ -758,9 +756,21 @@ a.service-card{
   padding:14px 16px;
   text-decoration:none;
   color:var(--bf-ink);
+  transition:border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+.home-insight-title{
+  display:block;
+  margin:0 0 6px 0;
   font-weight:800;
   line-height:1.35;
-  transition:border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+.home-insight-subtitle{
+  display:block;
+  margin:0;
+  color:var(--bf-slate);
+  font-size:.95rem;
+  font-weight:400;
+  line-height:1.5;
 }
 .home-insight-card:hover{
   border-color:rgba(37,99,235,.35);
@@ -931,7 +941,7 @@ footer{
   .nav-links{ display:none; }
 
   .services-grid, .resources-grid, .image-grid{ grid-template-columns:1fr; }
-  .home-insight-card{ flex:0 0 300px; }
+  .home-insights-row{ grid-template-columns:1fr; }
   .cta-section h2{ font-size:1.75rem; }
 
   .video-hero{ height:260px; margin:1.5rem auto 0; }
@@ -1082,7 +1092,7 @@ body::before{
                 <li><a href="insights.html">Insights</a></li>
                 <!-- <li><a href="#case-studies">Case Studies</a></li> -->
                 <!-- <li><a href="#resources">Resources</a></li> -->
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#site-footer">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -1238,10 +1248,16 @@ body::before{
       </div>
       <div class="home-insights-row">
         <a class="home-insight-card fade-in" href="insights/profit-on-paper-panic-in-the-bank-account/">
-          Profit on Paper, Panic in the Bank Account
+          <span class="home-insight-title">Profit on Paper, Panic in the Bank Account</span>
+          <span class="home-insight-subtitle">Why hospitality groups run out of cash even when margins look healthy on paper.</span>
         </a>
         <a class="home-insight-card fade-in" href="insights/why-good-financial-reporting-still-leads-to-bad-decisions/">
-          Why &ldquo;Good&rdquo; Financial Reporting Still Leads to Bad Decisions
+          <span class="home-insight-title">Why &ldquo;Good&rdquo; Financial Reporting Still Leads to Bad Decisions</span>
+          <span class="home-insight-subtitle">Clean books are necessary, but decision support is what improves forward choices.</span>
+        </a>
+        <a class="home-insight-card fade-in" href="insights/financial-metrics-hospitality-owners-watch-too-late/">
+          <span class="home-insight-title">The Financial Metrics Hospitality Owners Watch Too Late</span>
+          <span class="home-insight-subtitle">The early operational metrics that reveal pressure before EBITDA starts slipping.</span>
         </a>
       </div>
     </section>
@@ -1637,7 +1653,7 @@ body::before{
       </div>
     </section>
 
-    <footer>
+    <footer id="site-footer">
       <div class="footer-content">
         <div class="footer-section">
           <a class="footer-logo" href="index.html#top" aria-label="Back to top of home page">
@@ -1693,6 +1709,10 @@ body::before{
     </script>
 </body>
 </html>
+
+
+
+
 
 
 
