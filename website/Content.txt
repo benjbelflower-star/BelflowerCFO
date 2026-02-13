@@ -5,7 +5,7 @@ Headline:
 
 Financial Clarity for Operators Who Can’t Afford to Guess
 Subheadline:
-Strategic finance leadership for hospitality groups, government contractors, and seasonal businesses — without the cost of a full-time CFO.
+Strategic finance leadership for hospitality groups, government contractors, and seasonal businesses without the cost of a full-time CFO.
 
 CTA Button:
 
@@ -15,7 +15,7 @@ Book a Free Financial Quick Look
 
 Short paragraph:
 
-I partner with growth-minded operators — from remote resorts to regional government contractors — who need structure, clarity, and foresight in their numbers. Whether you’re facing seasonal swings, multi-site complexity, or preparing a bid, I help you make confident decisions that keep you ahead of your cash flow, your competition, and your next move.
+I partner with growth-minded operators, from remote resorts to regional government contractors, who need structure, clarity, and foresight in their numbers. Whether you’re facing seasonal swings, multi-site complexity, or preparing a bid, I help you make confident decisions that keep you ahead of your cash flow, your competition, and your next move.
 
 3. Services Overview (With Links to Deeper Content Pages)
 
@@ -54,7 +54,7 @@ Hospitality Groups • Government Contractors • Multi-Unit F&B Operators • O
 6. Case Studies / Mini Stories
 
 Example 1:
-"A lodge operator faced a $200K winter cash gap. We restructured expenses, modeled scenarios, and extended their runway by 3 months — without layoffs."
+"A lodge operator faced a $200K winter cash gap. We restructured expenses, modeled scenarios, and extended their runway by 3 months, without layoffs."
 
 Example 2:
 "Helped a government contractor build a pro forma that won a 30-year federal contract worth $50M."
@@ -73,4 +73,5 @@ Mini-Case: “How I Consolidated 180 Profit Centers Into 14 Without Losing Insig
 
 8. Call to Action (Repeat)
 
-Book a Free Financial Quick Look — 30 minutes, no strings attached. We’ll review your numbers and identify 2–3 actions you can take right now.f
+Book a Free Financial Quick Look: 30 minutes, no strings attached. We’ll review your numbers and identify 2–3 actions you can take right now.f
+
