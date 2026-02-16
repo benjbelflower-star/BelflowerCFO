@@ -14,7 +14,7 @@
   --bf-ink:#0B1220;
   --bf-slate:#334155;
   --bf-muted:#64748B;
-  --bf-bg:#F8FAFC;
+  --bf-bg:#FFFFFF;
   --bf-card:#FFFFFF;
   --bf-border:#E2E8F0;
   --bf-accent:#3B5C7E;
@@ -129,14 +129,19 @@ main{
   padding:24px 0;
 }
 
-.insight-hero{ margin-bottom:28px; }
+.insight-hero{
+  margin-bottom:28px;
+  padding:20px 22px;
+  border-radius:0;
+  background:#1F2A3D;
+}
 
 .insight-kicker{
   margin:0 0 10px 0;
   letter-spacing:0.08em;
   text-transform:uppercase;
   font-size:0.85rem;
-  color:var(--bf-accent);
+  color:#CBD5E1;
   font-weight:700;
 }
 
@@ -144,12 +149,15 @@ main{
   margin:0 0 10px 0;
   font-size:clamp(2rem, 3vw, 2.6rem);
   line-height:1.1;
+  color:#FFFFFF;
+  font-weight:500;
 }
 
 .insight-subtitle{
   margin:0;
   font-size:1.1rem;
-  color:var(--bf-slate);
+  color:#FFFFFF;
+  font-weight:400;
 }
 
 .insight-body h2,
