@@ -217,8 +217,45 @@ nav {
 
 /* --- CTA --- */
 .cta-section {
-  text-align: center;
   padding: 120px 0;
+}
+
+.cta-layout {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.cta-layout .who-content {
+  flex: 1;
+  text-align: left;
+}
+
+.cta-layout .who-image {
+  flex: 0 0 260px;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-layout .who-image figure {
+  margin: 0;
+  text-align: center;
+}
+
+.cta-layout .who-image img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border-radius: 50%;
+  box-shadow: 0 12px 26px rgba(2, 6, 23, 0.15);
+}
+
+.cta-layout .who-caption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--bf-muted);
+  font-weight: 700;
 }
 
 .cta-primary {
@@ -322,6 +359,18 @@ footer {
   .friction-grid { grid-template-columns: 1fr; }
   .pillars-grid { grid-template-columns: 1fr; }
   .container { padding: 0 24px; }
+  .cta-layout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cta-layout .who-image {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .cta-layout .who-image img {
+    width: 200px;
+    height: 200px;
+  }
 }
     </style>
 </head>
@@ -342,7 +391,7 @@ footer {
         <span class="section-subtitle">Scale the Cash</span>
         <h1>Stop managing by bank balance. Start leading with a roadmap.</h1>
         <p>Growth in the hospitality industry is deceptive. Higher revenue often masks a tightening cash crunch and operational drift. We provide the high level financial oversight you need to move from running restaurants to owning a portfolio.</p>
-        <a href="#audit" class="cta-primary">Schedule Your Strategy Audit</a>
+        <a href="https://calendly.com/benjbelflower/introduction-chat" class="cta-primary">Schedule Your Strategy Audit</a>
     </div>
 </section>
 
@@ -402,10 +451,21 @@ footer {
 
 <section class="cta-section" id="audit">
     <div class="container">
-        <h2>Get the Clarity Your Growth Requires</h2>
-        <p style="margin-bottom: 40px; color: var(--bf-slate);">Identify the blind spots in your multi-unit cash flow and see if a fractional partnership is the right lever to protect your margins.</p>
-        <a href="mailto:benjbelflower@gmail.com" class="cta-primary">Schedule Your Strategy Audit</a>
-        <span class="cta-subtext">For owners of 3+ locations or $5M+ in revenue</span>
+        <div class="cta-layout">
+            <div class="who-content">
+                <span class="section-subtitle">Next Step</span>
+                <h2>Get the Clarity Your Growth Requires</h2>
+                <p style="margin-bottom: 40px; color: var(--bf-slate);">Identify the blind spots in your multi-unit cash flow and see if a fractional partnership is the right lever to protect your margins.</p>
+                <a href="https://calendly.com/benjbelflower/introduction-chat" class="cta-primary">Schedule Your Strategy Audit</a>
+                <span class="cta-subtext">For owners of 3+ locations or $5M+ in revenue</span>
+            </div>
+            <div class="who-image">
+                <figure>
+                    <img src="/assets/Casual12.jpg" srcset="/assets/Casual12.jpg 1x, /assets/Casual12.jpg 2x" alt="Ben Belflower headshot">
+                    <figcaption class="who-caption">Ben Belflower, BelflowerCFO</figcaption>
+                </figure>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -470,3 +530,4 @@ footer {
 
 </body>
 </html>
+
