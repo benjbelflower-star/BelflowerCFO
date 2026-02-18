@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Belflower CFO</title>
+  <meta name="description" content="About Belflower CFO: decision clarity, liquidity protection, and capital discipline for owner-led hospitality businesses.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@600&display=swap');
+
+    :root{
+      --bf-ink:#0B1220;
+      --bf-slate:#1F2A3D;
+      --bf-muted:#475569;
+      --bf-accent:#3B5C7E;
+      --bf-accent-2:#476E95;
+      --bf-emphasis:#4682B4;
+      --bf-border:#CBD5E1;
+      --bf-bg:#FFFFFF;
+      --bf-card:#FFFFFF;
+      --bf-max:1280px;
+      --bf-shadow:0 12px 24px rgba(2,6,23,.08);
+      --bf-radius:14px;
+      --bf-font:'Manrope', Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    *{ box-sizing:border-box; margin:0; padding:0; }
+    body{
+      font-family:'Manrope', Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--bf-ink);
+      background:var(--bf-bg);
+      line-height:1.7;
+    }
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(255,255,255,.94);
+      backdrop-filter: blur(12px);
+      border-bottom:1px solid var(--bf-border);
+      z-index:1000;
+      padding:.9rem 0;
+    }
+    .nav-container{
+      max-width:var(--bf-max);
+      margin:0 auto;
+      padding:0 24px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .logo{
+      font-size:1.05rem;
+      font-weight:750;
+      letter-spacing:-0.02em;
+      color:var(--bf-ink);
+      text-decoration:none;
+      display:flex;
+      align-items:center;
+      gap:.6rem;
+    }
+    .logo-wordmark{
+      display:inline-block;
+      color:var(--bf-ink);
+      font-family:'Montserrat', 'Manrope', Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.01em;
+      line-height:1;
+    }
+    .nav-links{
+      display:flex;
+      gap:2rem;
+      list-style:none;
+    }
+    .nav-links a{
+      color:var(--bf-slate);
+      text-decoration:none;
+      font-size:.95rem;
+      font-weight:600;
+      transition:color .2s ease;
+      position:relative;
+    }
+    .nav-links a:hover{ color:var(--bf-accent); }
+    .nav-links a::after{
+      content:'';
+      position:absolute;
+      bottom:-6px;
+      left:0;
+      width:0;
+      height:2px;
+      background:var(--bf-accent);
+      transition:width .2s ease;
+    }
+    .nav-links a:hover::after{ width:100%; }
+    main{
+      max-width:var(--bf-max);
+      margin:0 auto;
+      padding:112px 22px 72px;
+    }
+    .about-wrap{
+      background:transparent;
+      border:0;
+      border-radius:0;
+      box-shadow:none;
+      padding:0;
+    }
+    .kicker{
+      text-transform:uppercase;
+      letter-spacing:.09em;
+      font-weight:800;
+      color:var(--bf-accent);
+      margin-bottom:8px;
+      font-size:.82rem;
+    }
+    h1{
+      font-size:2.35rem;
+      letter-spacing:-.02em;
+      line-height:1.2;
+      margin-bottom:18px;
+    }
+    h2{
+      font-size:1.35rem;
+      letter-spacing:-.015em;
+      margin:26px 0 8px;
+    }
+    p{ color:var(--bf-slate); margin:0 0 12px; }
+    ul{ margin:0 0 12px 20px; color:var(--bf-slate); }
+    .emphasis{ color:var(--bf-emphasis); font-weight:700; }
+    .lead{ font-size:1.12rem; color:var(--bf-ink); }
+    .cta{
+      margin-top:18px;
+      padding-top:18px;
+      padding-bottom:12px;
+      border-top:1px solid var(--bf-border);
+    }
+    .cta-text{
+      margin:0;
+      color:var(--bf-ink);
+      font-weight:700;
+    }
+
+    .cta-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:999px;
+      border:1px solid rgba(37,99,235,.2);
+      background:var(--bf-accent);
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      letter-spacing:-0.01em;
+      box-shadow:0 10px 18px rgba(37,99,235,.18);
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .cta-button:hover{
+      transform:translateY(-1px);
+      box-shadow:0 14px 24px rgba(37,99,235,.22);
+    }
+    footer{
+      background:var(--bf-card);
+      border-top:1px solid var(--bf-border);
+      padding:3rem 24px 1.5rem;
+      margin-top:3rem;
+    }
+    .footer-logo{
+      display:inline-flex;
+      align-items:center;
+      margin-bottom:12px;
+    }
+    .footer-logo .logo-wordmark{
+      font-size:1.08rem;
+    }
+    .footer-content{
+      max-width:var(--bf-max);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+      gap:24px;
+      margin-bottom:1.75rem;
+    }
+    .footer-section h4{
+      color:var(--bf-ink);
+      font-size:.9rem;
+      font-weight:900;
+      margin-bottom:.75rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    .footer-section p, .footer-section a{
+      font-size:.95rem;
+      color:var(--bf-slate);
+      text-decoration:none;
+      line-height:1.75;
+      transition:color .15s ease;
+    }
+    .footer-section p{ margin:0; }
+    .footer-section a:hover{ color:var(--bf-accent); }
+    .footer-bottom{
+      max-width:var(--bf-max);
+      margin:0 auto;
+      padding-top:1.25rem;
+      border-top:1px solid var(--bf-border);
+      text-align:center;
+      font-size:.9rem;
+      color:var(--bf-muted);
+    }
+    @media (max-width:768px){
+      .nav-links{ display:none; }
+      h1{ font-size:1.95rem; }
+      .about-wrap{ padding:24px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a class="logo" href="index.html#top" aria-label="Back to home">
+        <span class="logo-wordmark">BELFLOWER|CFO</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#who">Who I Work With</a></li>
+        <li><a href="index.html#why">Why Work With Me</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="index.html#site-footer">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <article class="about-wrap">
+      <div class="kicker">About</div>
+      <h1>Decision Clarity at the Inflection Point</h1>
+
+      <p class="lead">Growing hospitality businesses rarely struggle with effort or ambition. They struggle with visibility.</p>
+      <p>At a certain stage, reporting is accurate, revenue is strong, and operations are busy. Yet decisions feel heavier. Cash timing tightens. Labor volatility increases. Capital commitments carry more weight.</p>
+      <p>That is the inflection point where financial infrastructure must mature.</p>
+
+      <h2>Who I Work With</h2>
+      <p>I work primarily with owner-led, multi-location hospitality operators navigating this stage of growth.</p>
+      <p>These are businesses that:</p>
+      <ul>
+        <li>Are profitable on paper</li>
+        <li>Are expanding or stabilizing multiple units</li>
+        <li>Have solid accounting support</li>
+        <li>But lack forward-looking financial clarity at the decision level</li>
+      </ul>
+      <p>My role is not to replace accounting. It is to strengthen judgment.</p>
+
+      <h2>What I Do</h2>
+      <p>As a fractional CFO, I provide:</p>
+      <ul>
+        <li>Forward cash visibility</li>
+        <li>Structured capital timing discipline</li>
+        <li>Labor and operational cost alignment</li>
+        <li>Scenario modeling before commitments are made</li>
+      </ul>
+      <p>This shifts financial management from reactive to intentional.</p>
+
+      <h2>Background and Credibility</h2>
+      <p>My experience spans multi-state, labor-intensive hospitality environments. My years leading finance teams specialized in locations operating under private and government contracts where seasonality, asset intensity, and thin margins demand disciplined liquidity management.</p>
+      <p>Across these environments, I have led:</p>
+      <ul>
+        <li>Forecasting refinement that reduced variance and improved decision confidence</li>
+        <li>Working capital restructuring that strengthened liquidity position</li>
+        <li>Long-range capital modeling supporting major contract retention</li>
+        <li>Asset efficiency initiatives reducing annual depreciation exposure</li>
+      </ul>
+      <p>I operate where complexity and capital risk intersect.</p>
+      <p>Revenue creates momentum. Liquidity preserves control.</p>
+
+      <div class="cta">
+        <p class="cta-text">If decisions are starting to feel heavier than they should, a short Financial Clarity Conversation is the right next step.</p>
+      </div>
+      <a class="cta-button" href="https://calendly.com/benjbelflower/free-financial-quick-look-financial-reset-clone?a1=Free%20Financial%20Quick%20Look" target="_blank" rel="noopener">Let's preview your next decision</a>
+    </article>
+  </main>
+
+  <footer id="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <a class="footer-logo" href="index.html#top" aria-label="Back to top of home page">
+          <span class="logo-wordmark">BELFLOWER|CFO</span>
+        </a>
+        <h4>Belflower Finance</h4>
+        <p>Fractional CFO support for multi-site and seasonal Owners.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <p><a href="index.html#services">Cash Clarity</a></p>
+        <p><a href="index.html#services">Forecast to Action</a></p>
+        <p><a href="index.html#services">Financial Reset Intensive</a></p>
+        <p><a href="about.html">About</a></p>
+      </div>
+      <div class="footer-section">
+        <h4>Get in Touch</h4>
+        <p><a href="https://calendly.com/benjbelflower/free-financial-quick-look-financial-reset-clone?a1=Free%20Financial%20Quick%20Look" target="_blank" rel="noopener">Book a Free Financial Quick Look</a></p>
+        <p>
+          <a href="https://www.linkedin.com/in/benbelflower" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:inline-flex; align-items:center; gap:8px;">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" role="img">
+              <path d="M4.98 3.5c0 1.38-1.11 2.5-2.49 2.5A2.5 2.5 0 1 1 4.98 3.5zM0.5 8.5h4.96V23H0.5V8.5zm7.5 0h4.75v1.98h.07c.66-1.25 2.27-2.56 4.67-2.56 4.99 0 5.91 3.27 5.91 7.52V23h-4.96v-6.52c0-1.56-.03-3.56-2.17-3.56-2.18 0-2.51 1.7-2.51 3.46V23H8V8.5z"/>
+            </svg>
+            LinkedIn
+          </a>
+        </p>
+        <p>
+          <a href="mailto:ben@belflowercfo.com" aria-label="Email" style="display:inline-flex; align-items:center; gap:8px;">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" role="img">
+              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 4.88-8-4.88V6l8 4.88L20 6v2.24z"/>
+            </svg>
+            ben@belflowercfo.com
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Belflower Finance. All rights reserved.</div>
+  </footer>
+</body>
+</html>
+
+
+

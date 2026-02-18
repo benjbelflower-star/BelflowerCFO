@@ -160,7 +160,7 @@ section{
   background-clip:initial !important;
 }
 .hero p{
-  font-size:1.12rem;
+  font-size:1.24rem;
   color:var(--bf-slate);
   margin-bottom:1.75rem;
   line-height:1.8;
@@ -198,11 +198,39 @@ section{
   font-weight:700;
 }
 
-/* Why Work With Me */
+.who .section-subtitle{
+  font-size:1.16rem;
+}
+
+
+
+#why .section-header{
+  text-align:left;
+}
+#why .section-subtitle{
+  margin:0 0 1.8rem;
+}
+
+#services .section-header{
+  text-align:left;
+}
+#services .section-subtitle{
+  margin:0;
+}
+#insights-home .section-header{
+  text-align:left;
+}
+#insights-home .section-subtitle{
+  margin:0;
+}
+
+
+
 .why-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
   gap:16px;
+  margin-top:1.4rem;
 }
 .why-card{
   background:var(--bf-card);
@@ -307,20 +335,20 @@ section{
 /* Section headers */
 .section-header{ text-align:center; margin-bottom:2.75rem; }
 .section-badge{
-  display:inline-block;
-  background:rgba(37,99,235,.08);
-  border:1px solid rgba(37,99,235,.18);
-  padding:.45rem 1rem;
-  border-radius:999px;
-  font-size:.78rem;
+  display:block;
+  background:transparent;
+  border:0;
+  padding:0;
+  border-radius:0;
+  font-size:.82rem;
   font-weight:800;
   color:var(--bf-accent);
-  margin-bottom:1rem;
+  margin-bottom:.7rem;
   letter-spacing:.09em;
   text-transform:uppercase;
 }
 .section-title{
-  font-size:2.2rem;
+  font-size:2.35rem;
   font-weight:850;
   margin-bottom:.85rem;
   letter-spacing:-0.02em;
@@ -929,9 +957,12 @@ footer{
   .who-image{ width:100%; justify-content:flex-start; }
   .who-image img{ width:200px; height:200px; }
   .hero h1{ font-size:2.15rem; }
-  .hero p{ font-size:1.02rem; }
+  .hero p{ font-size:1.12rem; }
 
-  .section-title{ font-size:1.75rem; }
+  .who .section-subtitle{ font-size:1.08rem; }
+
+  
+  .section-title{ font-size:1.9rem; }
   .nav-links{ display:none; }
 
   .services-grid, .resources-grid, .image-grid{ grid-template-columns:1fr; }
@@ -947,18 +978,10 @@ footer{
 
 /* === Contrast Enhancements === */
 
-/* Accent underline for section titles */
-.section-title{
-  position: relative;
-}
+/* Accent underline removed: titles are text-only */
 .section-title::after{
-  content:"";
-  display:block;
-  width:56px;
-  height:3px;
-  margin:14px auto 0;
-  background: linear-gradient(90deg, var(--bf-accent), var(--bf-accent-2));
-  border-radius:2px;
+  content:none;
+  display:none;
 }
 
 /* Subtle section separation */
@@ -1048,7 +1071,7 @@ body{
 /* Desktop scale bump without affecting mobile */
 @media (min-width: 1024px){
   .hero h1{ font-size: 3.35rem; }
-  .section-title{ font-size: 2.35rem; }
+  .section-title{ font-size: 2.55rem; }
 }
 
 
@@ -1084,6 +1107,7 @@ body::before{
                 <li><a href="#who">Who I Work With</a></li>
                 <li><a href="#why">Why Work With Me</a></li>
                 <li><a href="insights.html">Insights</a></li>
+                <li><a href="about.html">About</a></li>
                 <!-- <li><a href="#case-studies">Case Studies</a></li> -->
                 <!-- <li><a href="#resources">Resources</a></li> -->
                 <li><a href="#site-footer">Contact</a></li>
@@ -1098,8 +1122,7 @@ body::before{
     </div>
     <h1>Financial <span class="highlight">clarity</span> for Owners who can&rsquo;t afford to guess</h1>
     <p>
-      Strategic finance leadership for hospitality groups, government contractors, and seasonal businesses without the cost
-      of a full-time CFO.
+      See risk earlier. Decide with confidence. Avoid expensive surprises.
     </p>
     <div class="cta-group">
       <a href="https://calendly.com/benjbelflower/free-financial-quick-look-financial-reset-clone?a1=Free%20Financial%20Quick%20Look" class="cta-primary" target="_blank" rel="noopener">
@@ -1139,11 +1162,11 @@ body::before{
         <div class="who-content">
           <div class="section-badge">Who I Work With</div>
           <h2 class="section-title">Owners who need structure, clarity, and foresight</h2>
-          <p class="section-subtitle">
-            I partner with growth-minded Owners from remote resorts to regional government contractors who want
-            <span class="emphasis">structure</span> in their reporting, <span class="emphasis">clarity</span> in their numbers, and
-            <span class="emphasis">foresight</span> in their next move. Whether you&rsquo;re facing seasonal swings, multi-site complexity,
-            or preparing a bid, we build a clear financial rhythm for the year ahead.
+                    <p class="section-subtitle">
+            Owners and operators who are profitable but no longer get comfort from reports alone.<br><br>
+            You know your business works - but decisions around cash, labor, and capital feel heavier than they should.<br><br>
+            You&rsquo;ve outgrown tactical finance.<br><br>
+            You need strategic clarity.
           </p>
           <p class="section-callout">
             &ldquo;I help you make confident decisions that keep you ahead of your cash flow, your competition, and your next move.&rdquo;
@@ -1198,8 +1221,9 @@ body::before{
     <section id="why">
       <div class="section-header">
         <div class="section-badge">Why Work With Me</div>
-        <h2 class="section-title">AI can give you numbers. I help you make them matter.</h2>
+        <h2 class="section-title">Decision Clarity at Scale</h2>
       </div>
+      <p class="section-subtitle"> Most finance support delivers reports. The issue at your stage is not reporting. It is <span class="emphasis">decision clarity.</span> When growth increases complexity, you need forward visibility, capital discipline, and liquidity protection. I help you see risk earlier and make decisions that hold up under pressure. </p>
       <div class="why-grid">
         <div class="why-card fade-in">
           <h3>Strategic Foresight</h3>
@@ -1219,6 +1243,7 @@ body::before{
         </div>
       </div>
     </section>
+    <!--
 
     <section id="industry">
       <div class="section-header">
@@ -1233,6 +1258,7 @@ body::before{
         <div class="industry-card fade-in">Property Management Firms</div>
       </div>
     </section>
+    -->
 
     <section id="insights-home">
       <div class="section-header">
@@ -1661,6 +1687,7 @@ body::before{
           <p><a href="#services">Cash Clarity</a></p>
           <p><a href="#services">Forecast to Action</a></p>
           <p><a href="#services">Financial Reset Intensive</a></p>
+          <p><a href="about.html">About</a></p>
         </div>
       <div class="footer-section">
         <h4>Get in Touch</h4>
@@ -1674,11 +1701,11 @@ body::before{
           </a>
         </p>
         <p>
-          <a href="mailto:benjbelflower@gmail.com" aria-label="Email" style="display:inline-flex; align-items:center; gap:8px;">
+          <a href="mailto:ben@belflowercfo.com" aria-label="Email" style="display:inline-flex; align-items:center; gap:8px;">
             <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" role="img">
               <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 4.88-8-4.88V6l8 4.88L20 6v2.24z"/>
             </svg>
-            benjbelflower@gmail.com
+            ben@belflowercfo.com
           </a>
         </p>
       </div>
@@ -1703,6 +1730,44 @@ body::before{
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
